@@ -4,7 +4,7 @@
   "description": "Projeto de site para uma agência de design e desenvolvimentos de sites.",
   "main": "index.js",
   "scripts": {
-    "build-css": "npx tailwindcss -i ./input.css -o ./arquivos/css/styles.css --watch"
+    "build-css": "npx tailwindcss -i input.css -o ./arquivos/css/styles.css --watch"
   },
   "author": "Thales Mariano",
   "license": "ISC",
