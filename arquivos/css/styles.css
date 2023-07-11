@@ -683,6 +683,10 @@ video {
   background-image: url('arquivos/images/bg-inicio.png');
 }
 
+.bg-\[url\(\'\.\.\/images\/bg-eye-iv\.png\'\)\] {
+  background-image: url('../images/bg-eye-iv.png');
+}
+
 .bg-cover {
   background-size: cover;
 }
