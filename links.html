@@ -14,8 +14,8 @@
 	<title>IV Studio | Links</title>
 </head>
 <body>
-	<div class="flex flex-col justify-start items-center w-full h-screen bg-neutral-900">
-		<div class="flex flex-col justify-center items-center gap-y-10 w-full h-full bg-[url('../images/bg-eye-iv.png')] bg-cover bg-center">
+	<div class="flex flex-col justify-start items-center w-full h-screen bg-neutral-900 bg-[url('arquivos/images/bg-eye-iv.png')] bg-cover bg-center">
+		<div class="flex flex-col justify-center items-center gap-y-10 w-full h-full">
 			<div>
 				<img class="w-24" src="arquivos/images/iv-icon.png">
 			</div>
@@ -81,7 +81,23 @@
 			</div>
 		</div>
 		<footer class="w-full">
-			<div class="w-full flex justify-between items-center px-28 py-5 bg-black">
+			<div class="w-full flex flex-col gap-y-5 py-10 sm:hidden">
+				<div class="w-full">
+					<p class="text-white text-center text-xs">&copy 2023 IV Studio. Todos os direitos reservados.</p>
+					<p class="text-white text-center text-xs">Desenvolvido por Thales Web Developer.</p>
+				</div>
+				<div class="w-full flex justify-center items-center gap-x-4">
+					<div>
+						<img class="w-28" src="arquivos/images/ivstudio-logo.png">
+					</div>
+					<div class="w-px h-8 bg-white"></div>
+					<div>
+						<img class="w-28" src="arquivos/images/thalesdeveloper-logo.png">
+					</div>
+				</div>
+			</div>
+
+			<div class="w-full hidden sm:flex justify-between items-center px-28 py-5 sm:bg-black">
 				<div>
 					<img class="w-40" src="arquivos/images/ivstudio-logo.png">
 				</div>
