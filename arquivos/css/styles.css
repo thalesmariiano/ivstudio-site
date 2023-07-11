@@ -582,20 +582,20 @@ video {
   width: 10rem;
 }
 
+.w-5 {
+  width: 1.25rem;
+}
+
 .w-6 {
   width: 1.5rem;
 }
 
+.w-7 {
+  width: 1.75rem;
+}
+
 .w-72 {
   width: 18rem;
-}
-
-.w-8 {
-  width: 2rem;
-}
-
-.w-80 {
-  width: 20rem;
 }
 
 .w-full {
@@ -604,14 +604,6 @@ video {
 
 .w-px {
   width: 1px;
-}
-
-.w-5 {
-  width: 1.25rem;
-}
-
-.w-7 {
-  width: 1.75rem;
 }
 
 .flex-col {
@@ -703,6 +695,14 @@ video {
   background-image: url('arquivos/images/bg-inicio.png');
 }
 
+.bg-\[url\(\'arquivos\/images\/bg-eye-blurry\.png\'\)\] {
+  background-image: url('arquivos/images/bg-eye-blurry.png');
+}
+
+.bg-\[url\(\'\.\.\/images\/bg-eye-blurry\.png\'\)\] {
+  background-image: url('../images/bg-eye-blurry.png');
+}
+
 .bg-cover {
   background-size: cover;
 }
@@ -737,11 +737,6 @@ video {
 
 .text-center {
   text-align: center;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-sm {
@@ -788,6 +783,19 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.hover\:bg-neutral-300:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(212 212 212 / var(--tw-bg-opacity));
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -805,20 +813,20 @@ video {
     height: 100%;
   }
 
-  .sm\:w-\[26rem\] {
-    width: 26rem;
-  }
-
-  .sm\:w-80 {
-    width: 20rem;
-  }
-
   .sm\:w-6 {
     width: 1.5rem;
   }
 
   .sm\:w-8 {
     width: 2rem;
+  }
+
+  .sm\:w-80 {
+    width: 20rem;
+  }
+
+  .sm\:w-\[26rem\] {
+    width: 26rem;
   }
 
   .sm\:justify-start {
