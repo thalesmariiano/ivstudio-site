@@ -550,6 +550,10 @@ video {
   height: 2.5rem;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
 .h-\[95\%\] {
   height: 95%;
 }
@@ -562,20 +566,16 @@ video {
   height: 100vh;
 }
 
-.h-28 {
-  height: 7rem;
-}
-
-.h-8 {
-  height: 2rem;
-}
-
 .w-10 {
   width: 2.5rem;
 }
 
 .w-24 {
   width: 6rem;
+}
+
+.w-28 {
+  width: 7rem;
 }
 
 .w-40 {
@@ -602,26 +602,6 @@ video {
   width: 100%;
 }
 
-.w-32 {
-  width: 8rem;
-}
-
-.w-28 {
-  width: 7rem;
-}
-
-.w-1 {
-  width: 0.25rem;
-}
-
-.w-1\.5 {
-  width: 0.375rem;
-}
-
-.w-2 {
-  width: 0.5rem;
-}
-
 .w-px {
   width: 1px;
 }
@@ -632,10 +612,6 @@ video {
 
 .items-center {
   align-items: center;
-}
-
-.justify-start {
-  justify-content: flex-start;
 }
 
 .justify-center {
@@ -650,6 +626,11 @@ video {
   justify-content: space-around;
 }
 
+.gap-x-4 {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+
 .gap-x-5 {
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
@@ -659,17 +640,16 @@ video {
   row-gap: 2.5rem;
 }
 
+.gap-y-14 {
+  row-gap: 3.5rem;
+}
+
 .gap-y-16 {
   row-gap: 4rem;
 }
 
 .gap-y-5 {
   row-gap: 1.25rem;
-}
-
-.gap-x-4 {
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
 }
 
 .space-x-5 > :not([hidden]) ~ :not([hidden]) {
@@ -701,11 +681,6 @@ video {
   border-bottom-left-radius: 60px;
 }
 
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-neutral-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(23 23 23 / var(--tw-bg-opacity));
@@ -722,10 +697,6 @@ video {
 
 .bg-\[url\(\'arquivos\/images\/bg-inicio\.png\'\)\] {
   background-image: url('arquivos/images/bg-inicio.png');
-}
-
-.bg-\[url\(\'\.\.\/images\/bg-eye-iv\.png\'\)\] {
-  background-image: url('../images/bg-eye-iv.png');
 }
 
 .bg-cover {
@@ -758,11 +729,6 @@ video {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
 }
 
 .text-center {
@@ -823,10 +789,6 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:block {
-    display: block;
-  }
-
   .sm\:flex {
     display: flex;
   }
@@ -835,8 +797,20 @@ video {
     display: none;
   }
 
+  .sm\:h-full {
+    height: 100%;
+  }
+
   .sm\:w-\[26rem\] {
     width: 26rem;
+  }
+
+  .sm\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .sm\:gap-0 {
+    gap: 0px;
   }
 
   .sm\:bg-black {
