@@ -37,9 +37,8 @@ nextForm.addEventListener("click", e => {
 	verifyInput()
 
 	inputs.forEach(i => {
-		if(i.dataset.valid == "true"){
-			validAmount++
-		}
+		const isValid = i.dataset.valid == "true"
+		if(isValid) validAmount++
 	})
 
 	if(validAmount == inputs.length){
