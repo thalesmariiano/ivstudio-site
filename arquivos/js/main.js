@@ -1,7 +1,9 @@
 const form     = document.querySelector("form")
 const nextForm = document.querySelector("#next-form")
 const inputs   = document.querySelectorAll(".inputs")
-const inputErrors = []
+
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+var validAmount  = 0
 
 inputs.forEach(i => {
 	i.addEventListener("blur", () => verifyInput())	
@@ -14,12 +16,33 @@ function verifyInput(){
 
 		if(input.value == "" || input.value == " "){
 			warnText.classList.remove("opacity-0")
+			input.dataset.valid = "false"
 		}else{
 			warnText.classList.add("opacity-0")
+
+			if(input.type == "email"){
+				if(emailRegex.test(input.value)){
+					input.dataset.valid = "true"
+				}else{
+					input.dataset.valid = "false"
+				}
+			}else{
+				input.dataset.valid = "true"
+			}
 		}
 	})
 }
 
 nextForm.addEventListener("click", e => {
 	verifyInput()
+
+	inputs.forEach(i => {
+		if(i.dataset.valid == "true"){
+			validAmount++
+		}
+	})
+
+	if(validAmount == inputs.length){
+		form.submit()
+	}
 })
