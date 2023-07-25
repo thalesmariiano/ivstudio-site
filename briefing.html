@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>IV Studio | Briefing</title>
 
+	<link rel="stylesheet" type="text/css" href="arquivos/css/styles.css">
+
 	<script src="https://cdn.tailwindcss.com"></script>
 
 </head>
@@ -21,38 +23,43 @@
 					<div>
 						<label>
 							<span class="ml-1 font-black text-2xl leading-4 font-montserrat">Email</span> <br>
-							<input class="inputs-1 w-60 pl-5 mt-1 py-0.5 bg-transparent border-2 border-white rounded-2xl" type="email" name="email">
+							<input class="inputs w-60 pl-5 mt-1 py-0.5 bg-transparent border-2 border-white rounded-2xl" type="email" name="email" required>
 						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
 					</div>
 					<div>
 						<label>
 							<span class="ml-1 font-black text-2xl leading-4 font-montserrat font-">Qual é o seu nome completo?</span> <br>
-							<input class="inputs-1 w-[30rem] pl-5 py-0.5 mt-1 bg-transparent border-2 border-white rounded-xl" type="text" name="full-name" required>
+							<input class="inputs w-[30rem] pl-5 py-0.5 mt-1 bg-transparent border-2 border-white rounded-xl" type="text" name="full-name" required>
 						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
 					</div>
 					<div>
 						<label>
 							<span class="ml-1 font-black text-2xl leading-4 font-montserrat font-">Qual a sua posição na empresa?</span> <br>
-							<input class="inputs-1 w-[30rem] pl-5 py-0.5 mt-1 bg-transparent border-2 border-white rounded-xl" type="text" name="role" required>
+							<input class="inputs w-[30rem] pl-5 py-0.5 mt-1 bg-transparent border-2 border-white rounded-xl" type="text" name="role" required>
 						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
 					</div>
 					<div>
 						<label>
 							<span class="ml-1 font-black text-2xl leading-4 font-montserrat font-">Quais os motivos que levaram a <br> abrir essa empresa?</span> <br>
-							<input class="inputs-1 w-[30rem] pl-5 py-0.5 mt-1 bg-transparent border-2 border-white rounded-xl" type="text" name="motivation" required>
+							<input class="inputs w-[30rem] pl-5 py-0.5 mt-1 bg-transparent border-2 border-white rounded-xl" type="text" name="motivation" required>
 						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
 					</div>
 					<div>
 						<label>
 							<span class="ml-1 font-black text-2xl leading-4 font-montserrat font-">Por que você acredita que as <br> pessoas precisam da sua empresa?</span> <br>
-							<input class="inputs-1 w-[30rem] pl-5 py-0.5 mt-1 bg-transparent border-2 border-white rounded-2xl" type="text" name="needs-enterprise" required>
+							<input class="inputs w-[30rem] pl-5 py-0.5 mt-1 bg-transparent border-2 border-white rounded-2xl" type="text" name="needs-enterprise" required>
 						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
 					</div>
 				</div>
 			</form>
 			<div class="flex justify-between items-center my-16">
 				<div class="flex items-center gap-x-3">
-					<button id="next-form" class="flex items-center font-bold px-5 py-1 text-black bg-white rounded-2xl opacity-50 cursor-pointer">
+					<button id="next-form" class="flex items-center font-bold px-5 py-1 text-black bg-white rounded-2xl hover:bg-neutral-300 transition-all cursor-pointer">
 						Avançar
 						<img class="w-4 ml-2 translate-y-0.5" src="arquivos/images/arrow-right.png">
 					</button>
