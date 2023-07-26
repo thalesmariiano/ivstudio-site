@@ -5,6 +5,7 @@ const inputs   = document.querySelectorAll(".inputs")
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const emptyRegex = /^(?!\s*$).+/;
 var validAmount  = 0
+var blockButton = false
 
 inputs.forEach(i => {
 	i.addEventListener("blur", () => verifyInput(i))
@@ -21,7 +22,16 @@ inputs.forEach(i => {
 				}
 			})
 		}
+		
 		verifyInput(i)
+
+		if(validAmount == inputs.length){
+			console.log("teste")
+			blockButton = false
+
+			nextForm.classList.remove("opacity-30", "cursor-default")
+			nextForm.classList.add("cursor-pointer", "opacity-100")
+		}
 	})
 })
 
@@ -54,15 +64,21 @@ function verifyInput(input){
 	}
 }
 
-nextForm.addEventListener("click", e => {
-	inputs.forEach(i => {
-		verifyInput(i)
-		const isValid = i.dataset.valid == "true"
-		if(isValid) validAmount++
-	})
+nextForm.addEventListener("click", () => {
+	if(!blockButton){
+		inputs.forEach(i => {
+			verifyInput(i)
+			const isValid = i.dataset.valid == "true"
+			if(isValid) validAmount++
+		})
 
-	if(validAmount == inputs.length){
-		form.submit()
+		if(validAmount == inputs.length){
+			form.submit()
+		}else{
+			blockButton = true
+			nextForm.classList.add("opacity-30", "cursor-default")
+			nextForm.classList.remove("cursor-pointer")
+		}
 	}
 })
 
