@@ -48,6 +48,7 @@ function verifyInput(input){
 			}
 		}else{
 			input.dataset.valid = "true"
+			warnIcon.classList.remove("opacity-0")
 			warnIcon.src = "arquivos/images/valid.png"
 		}
 	}
