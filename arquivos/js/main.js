@@ -9,31 +9,33 @@ var blockButton = false
 
 inputs.forEach(i => {
 	i.addEventListener("blur", () => verifyInput(i))
-	i.addEventListener("input", () => {
-		if(i.nodeName == "TEXTAREA"){
-			if(i.scrollHeight > i.offsetHeight){
-				i.rows += 1
-			}
-			window.addEventListener("keydown", e => {
-				if(e.code == "Backspace"){
-					if(i.scrollHeight < i.offsetHeight){
-						i.rows -= 1
-					}
-				}
-			})
-		}
-		
-		verifyInput(i)
-
-		if(validAmount == inputs.length){
-			console.log("teste")
-			blockButton = false
-
-			nextForm.classList.remove("opacity-30", "cursor-default")
-			nextForm.classList.add("cursor-pointer", "opacity-100")
-		}
-	})
+	i.addEventListener("input", () => onInputListener(i))
 })
+
+function onInputListener(i){
+	if(i.nodeName == "TEXTAREA"){
+		if(i.scrollHeight > i.offsetHeight){
+			i.rows += 1
+		}
+		window.addEventListener("keydown", e => {
+			if(e.code == "Backspace"){
+				if(i.scrollHeight < i.offsetHeight){
+					i.rows -= 1
+				}
+			}
+		})
+	}
+		
+	verifyInput(i)
+
+	if(validAmount == inputs.length){
+		console.log("teste")
+		blockButton = false
+
+		nextForm.classList.remove("opacity-30", "cursor-default")
+		nextForm.classList.add("cursor-pointer", "opacity-100")
+	}
+}
 
 function verifyInput(input){
 	const warnText = input.parentNode.parentNode.parentNode.children[1]
