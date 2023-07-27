@@ -16,10 +16,16 @@ inputs.forEach(i => {
 function onBlurListener(e){
 	const input = e.target
 
-	if(input.type == "email"){
-		showWarn(input, validarEmail(input))
-	}else{
-		showWarn(input, !validarInput(input))
+	switch(input.type){
+		case "email":
+			showWarn(input, validarEmail(input))
+			break
+		case "checkbox":
+
+			break
+		default:
+			showWarn(input, !validarInput(input))
+			break
 	}
 }
 
@@ -39,10 +45,16 @@ function onInputListener(e){
 		})
 	}
 
-	if(input.type == "email"){
-		showWarn(input, validarEmail(input))
-	}else{
-		showWarn(input, !validarInput(input))
+	switch(input.type){
+		case "email":
+			showWarn(input, validarEmail(input))
+			break
+		case "checkbox":
+
+			break
+		default:
+			showWarn(input, !validarInput(input))
+			break
 	}
 
 	if(!validarInput(input) && input.dataset.valid == "false"){
