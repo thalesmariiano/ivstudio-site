@@ -17,7 +17,7 @@ function onBlurListener(e){
 	if(input.type == "email"){
 		showWarn(input, validarEmail(input))
 	}else{
-		showWarn(input, validarInput(input))
+		showWarn(input, !validarInput(input))
 	}
 }
 
@@ -40,7 +40,7 @@ function onInputListener(e){
 	if(input.type == "email"){
 		showWarn(input, validarEmail(input))
 	}else{
-		showWarn(input, validarInput(input))
+		showWarn(input, !validarInput(input))
 	}
 
 
@@ -53,20 +53,20 @@ function onInputListener(e){
 }
 
 const validarEmail = input => input.value !== "" || input.value !== " " ? emailRegex.test(input.value) : false
-const validarInput = input => input.value !== "" || input.value !== " "
+const validarInput = input => input.value == "" || input.value == " "
 
-function showWarn(input, bool){
+function showWarn(input, isValid){
 	const warnText = input.parentNode.parentNode.parentNode.children[1]
 	const warnIcon = input.parentNode.children[0]
 
-	if(!bool){
-		warnText.classList.remove("opacity-0")
-		warnIcon.classList.remove("opacity-0")
-		warnIcon.src = "arquivos/images/invalid.png"
-	}else{
+	if(isValid){
 		warnIcon.classList.remove("opacity-0")
 		warnText.classList.add("opacity-0")
 		warnIcon.src = "arquivos/images/valid.png"
+	}else{
+		warnText.classList.remove("opacity-0")
+		warnIcon.classList.remove("opacity-0")
+		warnIcon.src = "arquivos/images/invalid.png"
 	}
 }
 
