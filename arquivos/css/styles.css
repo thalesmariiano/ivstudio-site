@@ -424,6 +424,23 @@ video {
   display: none;
 }
 
+input[type="checkbox"]{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  background-color: transparent;
+  margin: 0;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #ffff;
+  border-radius: 100%;
+  transform: translateY(5px);
+}
+
+input[type="checkbox"]:checked {
+  background-color: #ffff;
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -532,12 +549,20 @@ video {
   position: relative;
 }
 
+.-left-5{
+  left: -1.25rem;
+}
+
 .left-0{
   left: 0px;
 }
 
 .top-0{
   top: 0px;
+}
+
+.top-3{
+  top: 0.75rem;
 }
 
 .my-10{
@@ -548,6 +573,10 @@ video {
 .my-16{
   margin-top: 4rem;
   margin-bottom: 4rem;
+}
+
+.mb-4{
+  margin-bottom: 1rem;
 }
 
 .ml-1{
@@ -610,6 +639,10 @@ video {
   width: 7rem;
 }
 
+.w-3{
+  width: 0.75rem;
+}
+
 .w-4{
   width: 1rem;
 }
@@ -668,6 +701,16 @@ video {
   cursor: pointer;
 }
 
+.select-none{
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.resize-none{
+  resize: none;
+}
+
 .flex-col{
   flex-direction: column;
 }
@@ -686,6 +729,11 @@ video {
 
 .justify-around{
   justify-content: space-around;
+}
+
+.gap-x-10{
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
 }
 
 .gap-x-3{
@@ -747,10 +795,6 @@ video {
 
 .rounded-full{
   border-radius: 9999px;
-}
-
-.rounded-xl{
-  border-radius: 0.75rem;
 }
 
 .rounded-b-\[60px\]{
@@ -825,16 +869,6 @@ video {
   padding-right: 1.25rem;
 }
 
-.py-0{
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.py-0\.5{
-  padding-top: 0.125rem;
-  padding-bottom: 0.125rem;
-}
-
 .py-1{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -890,13 +924,23 @@ video {
   font-weight: 700;
 }
 
-.leading-4{
-  line-height: 1rem;
+.leading-7{
+  line-height: 1.75rem;
 }
 
 .text-black{
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-neutral-200{
+  --tw-text-opacity: 1;
+  color: rgb(229 229 229 / var(--tw-text-opacity));
+}
+
+.text-red-500{
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .text-white{
@@ -907,6 +951,10 @@ video {
 .text-zinc-400{
   --tw-text-opacity: 1;
   color: rgb(161 161 170 / var(--tw-text-opacity));
+}
+
+.opacity-0{
+  opacity: 0;
 }
 
 .opacity-50{
@@ -934,6 +982,11 @@ video {
 
 .hover\:underline:hover{
   text-decoration-line: underline;
+}
+
+.focus\:text-white:focus{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px){
