@@ -6,7 +6,7 @@ const inputs       = document.querySelectorAll(".inputs")
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 var validAmount  = 0
-var blockSubmit = false
+var blockSubmit  = false
 
 inputs.forEach(i => {
 	i.addEventListener("blur", onBlurListener)
@@ -24,6 +24,9 @@ function onBlurListener(e){
 			showWarn(input, validarEmail(input))
 			break
 		case "checkbox":
+
+			break
+		case "radio":
 
 			break
 		default:
@@ -55,6 +58,9 @@ function onInputListener(e){
 		case "checkbox":
 
 			break
+		case "radio":
+
+			break
 		default:
 			showWarn(input, !validarInput(input))
 			break
@@ -76,16 +82,32 @@ function onInputListener(e){
 function showWarn(input, isValid){
 	const warnText = input.parentNode.parentNode.parentNode.children[1]
 	const warnIcon = input.parentNode.children[0]
+	
+	if(input.type == "checkbox" || input.type == "radio"){
+		const warnIconCheckbox = input.parentNode.parentNode.parentNode.parentNode.children[0]
+		const warnTextCheckbox = input.parentNode.parentNode.parentNode.parentNode.parentNode.children[2]
 
-	if(isValid){
-		warnIcon.classList.remove("opacity-0")
-		warnText.classList.add("opacity-0")
-		warnIcon.src = "arquivos/images/valid.png"
+		if(isValid){
+			warnIconCheckbox.classList.remove("opacity-0")
+			warnTextCheckbox.classList.add("opacity-0")
+			warnIconCheckbox.src = "arquivos/images/valid.png"
+		}else{
+			warnTextCheckbox.classList.remove("opacity-0")
+			warnIconCheckbox.classList.remove("opacity-0")
+			warnIconCheckbox.src = "arquivos/images/invalid.png"
+		}
 	}else{
-		warnText.classList.remove("opacity-0")
-		warnIcon.classList.remove("opacity-0")
-		warnIcon.src = "arquivos/images/invalid.png"
+		if(isValid){
+			warnIcon.classList.remove("opacity-0")
+			warnText.classList.add("opacity-0")
+			warnIcon.src = "arquivos/images/valid.png"
+		}else{
+			warnText.classList.remove("opacity-0")
+			warnIcon.classList.remove("opacity-0")
+			warnIcon.src = "arquivos/images/invalid.png"
+		}
 	}
+	
 }
 
 function validarForm(input){
@@ -106,6 +128,9 @@ function validarForm(input){
 			break
 		case "checkbox":
 
+			break
+		case "radio"
+			
 			break
 		default:
 			if(isValid && input.dataset.valid == "false"){
