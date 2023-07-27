@@ -1,10 +1,12 @@
-const form     = document.querySelector("form")
-const nextForm = document.querySelector("#next-form")
-const inputs   = document.querySelectorAll(".inputs")
+
+const form         = document.querySelector("form")
+const formPercent  = document.querySelector("#form-percent")
+const nextForm     = document.querySelector("#next-form")
+const inputs       = document.querySelectorAll(".inputs")
 
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 var validAmount  = 0
-var blockButton = false
+var blockSubmit = false
 
 inputs.forEach(i => {
 	i.addEventListener("blur", onBlurListener)
@@ -43,13 +45,17 @@ function onInputListener(e){
 		showWarn(input, !validarInput(input))
 	}
 
+	if(!validarInput(input) && input.dataset.valid == "false"){
+		input.dataset.valid = "true"
+		validAmount++
 
-	// if(validAmount == inputs.length){
-	// 	blockButton = false
+		if(validAmount == inputs.length){
+			blockSubmit = false
 
-	// 	nextForm.classList.remove("opacity-30", "cursor-default")
-	// 	nextForm.classList.add("cursor-pointer", "opacity-100")
-	// }
+			nextForm.classList.remove("opacity-30", "cursor-default")
+			nextForm.classList.add("cursor-pointer", "opacity-100")
+		}
+	}
 }
 
 const validarEmail = input => input.value !== "" || input.value !== " " ? emailRegex.test(input.value) : false
@@ -70,22 +76,48 @@ function showWarn(input, isValid){
 	}
 }
 
-nextForm.addEventListener("click", () => {
-	// if(!blockButton){
-	// 	inputs.forEach(i => {
-	// 		verifyInput(i)
-	// 		const isValid = i.dataset.valid == "true"
-	// 		if(isValid) validAmount++
-	// 	})
+function validarForm(i){
+	const isValid = !validarInput(i)
 
-	// 	if(validAmount == inputs.length){
-	// 		form.submit()
-	// 	}else{
-	// 		blockButton = true
-	// 		nextForm.classList.add("opacity-30", "cursor-default")
-	// 		nextForm.classList.remove("cursor-pointer")
-	// 	}
-	// }
+	if(i.type == "email"){
+		const isValidEmail = validarEmail(i)
+
+		if(isValidEmail && i.dataset.valid == "false"){
+			showWarn(i, isValidEmail)
+			i.dataset.valid = "true"
+			validAmount++
+		}else{
+			i.dataset.valid = "false"
+			showWarn(i, isValidEmail)
+		}
+	}else{
+		if(isValid && i.dataset.valid == "false"){
+			showWarn(i, isValid)
+			i.dataset.valid = "true"
+			validAmount++
+		}else{
+			i.dataset.valid = "false"
+			showWarn(i, isValid)
+		}
+	}
+}
+
+nextForm.addEventListener("click", () => {
+	if(!blockSubmit){
+		inputs.forEach(i => {
+			validarForm(i)
+		})
+
+		if(validAmount == inputs.length){
+
+		}else{
+			blockSubmit = true
+			nextForm.classList.add("opacity-30", "cursor-default")
+			nextForm.classList.remove("cursor-pointer")
+		}
+	}else{
+
+	}
 })
 
 form.addEventListener("submit", e => e.preventDefault())
