@@ -13,6 +13,9 @@ inputs.forEach(i => {
 	i.addEventListener("input", onInputListener)
 })
 
+const validarEmail = input => input.value !== "" || input.value !== " " ? emailRegex.test(input.value) : false
+const validarInput = input => input.value == "" || input.value == " "
+
 function onBlurListener(e){
 	const input = e.target
 
@@ -70,9 +73,6 @@ function onInputListener(e){
 	}
 }
 
-const validarEmail = input => input.value !== "" || input.value !== " " ? emailRegex.test(input.value) : false
-const validarInput = input => input.value == "" || input.value == " "
-
 function showWarn(input, isValid){
 	const warnText = input.parentNode.parentNode.parentNode.children[1]
 	const warnIcon = input.parentNode.children[0]
@@ -88,29 +88,35 @@ function showWarn(input, isValid){
 	}
 }
 
-function validarForm(i){
-	const isValid = !validarInput(i)
+function validarForm(input){
+	const isValid = !validarInput(input)
 
-	if(i.type == "email"){
-		const isValidEmail = validarEmail(i)
+	switch(input.type){
+		case "email":
+			const isValidEmail = validarEmail(input)
 
-		if(isValidEmail && i.dataset.valid == "false"){
-			showWarn(i, isValidEmail)
-			i.dataset.valid = "true"
-			validAmount++
-		}else{
-			i.dataset.valid = "false"
-			showWarn(i, isValidEmail)
-		}
-	}else{
-		if(isValid && i.dataset.valid == "false"){
-			showWarn(i, isValid)
-			i.dataset.valid = "true"
-			validAmount++
-		}else{
-			i.dataset.valid = "false"
-			showWarn(i, isValid)
-		}
+			if(isValidEmail && input.dataset.valid == "false"){
+				showWarn(input, isValidEmail)
+				input.dataset.valid = "true"
+				validAmount++
+			}else{
+				input.dataset.valid = "false"
+				showWarn(input, isValidEmail)
+			}
+			break
+		case "checkbox":
+
+			break
+		default:
+			if(isValid && input.dataset.valid == "false"){
+				showWarn(input, isValid)
+				input.dataset.valid = "true"
+				validAmount++
+			}else{
+				input.dataset.valid = "false"
+				showWarn(input, isValid)
+			}
+			break
 	}
 }
 
