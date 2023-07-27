@@ -129,8 +129,8 @@ function validarForm(input){
 		case "checkbox":
 
 			break
-		case "radio"
-			
+		case "radio":
+
 			break
 		default:
 			if(isValid && input.dataset.valid == "false"){
