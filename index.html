@@ -18,9 +18,9 @@
 		<section class="w-full h-[90%] flex flex-col items-center overflow-hidden bg-[url('./arquivos/images/bg-eye-blurry.png')] bg-center bg-cover bg-no-repeat relative rounded-b-[60px]">
 			<header class="w-full flex justify-around items-center pt-12">
 				<div>
-					<img class="w-60" src="arquivos/images/ivstudio-logo.png">
+					<img class="w-52 sm:w-60" src="arquivos/images/ivstudio-logo.png">
 				</div>
-				<nav>
+				<nav class="hidden md:block">
 					<ul class="flex space-x-7">
 						<li><a class="text-white relative font-montserrat font-bold text-2xl after:content-[' '] after:absolute after:left-1/2 after:-bottom-5 after:bg-white after:w-2 after:h-2 after:rounded-full" href="#">Home</a></li>
 						<li><a class="text-white font-montserrat font-bold text-2xl" href="#">Sobre</a></li>
@@ -28,6 +28,13 @@
 						<li><a class="text-white font-montserrat font-bold text-2xl" href="#">Contato</a></li>
 					</ul>
 				</nav>
+				<div class="md:hidden">
+					<button class="space-y-1.5">
+						<div class="w-8 h-1 bg-white rounded"></div>
+						<div class="w-8 h-1 bg-white rounded"></div>
+						<div class="w-8 h-1 bg-white rounded"></div>
+					</button>
+				</div>
 			</header>
 
 			<div class="w-full h-full flex justify-center items-center px-28">
