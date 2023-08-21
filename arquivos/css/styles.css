@@ -1045,12 +1045,12 @@ input[type="checkbox"]:checked {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\.\.\/images\/bg-eye-iv\.png\'\)\]{
-  background-image: url('../images/bg-eye-iv.png');
+.bg-\[url\(\'\.\.\/images\/bg-eye-blurry\.png\'\)\]{
+  background-image: url('../images/bg-eye-blurry.png');
 }
 
-.bg-\[url\(\'\.\/arquivos\/images\/bg-eye-blurry\.png\'\)\]{
-  background-image: url('./arquivos/images/bg-eye-blurry.png');
+.bg-\[url\(\'\.\.\/images\/bg-eye-iv\.png\'\)\]{
+  background-image: url('../images/bg-eye-iv.png');
 }
 
 .bg-\[url\(\'arquivos\/images\/bg-inicio\.png\'\)\]{
