@@ -5,14 +5,14 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: ['./**/*.{html, js}'],
   theme: {
-    extend: {
-      screens: { 
-        'md': '835px'
-      },
-    },
     screens: {
-     'xs': '420px',
-     ...defaultTheme.screens,
+      'xs': '475px',
+      ...defaultTheme.screens,
+    },
+    extend: {
+      screens: {
+        'md': '835px',
+      },
     },
     fontFamily: {
       montserrat:['Montserrat', 'sans-serif']
