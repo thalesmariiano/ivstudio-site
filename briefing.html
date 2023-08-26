@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="arquivos/images/favicon.png"/>
+	<title>IV Studio | Briefing</title>
+
+	<link rel="stylesheet" type="text/css" href="arquivos/css/styles.css">
+
+	<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-black text-white">
+	<div class="w-full flex flex-col justify-center items-center">
+		<header class="w-full my-10">
+			<div class="w-full h-44 flex justify-center items-center bg-[url('arquivos/images/bg-inicio.png')] bg-cover bg-center">
+				<img class="w-80" src="arquivos/images/ivstudio-logo.png">
+			</div>
+		</header>
+		<div class="mt-3">
+			<form action="saving-form.php" method="POST">
+				<div class="space-y-10 hidden">
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat">Email</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<input class="inputs w-60 font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="email" name="email" data-valid="false">
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Qual é o seu nome completo?</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Qual a sua posição na empresa?</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="role" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Quais os motivos que levaram a <br> abrir essa empresa?</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="motivation" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Por que você acredita que as <br> pessoas precisam da sua empresa?</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="needs-enterprise" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+				</div>
+
+				<div class="space-y-10 hidden">
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Qual o nome da empresa?</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Por que a empresa tem esse <br> nome? O que ele significa pra você?</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Defina resumidamente do que <br> se trata sua empresa.</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Qual o momento atual da sua empresa?</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Qual o público alvo da sua empresa?</p>
+						<div class="relative">
+							<img class="absolute -top-9 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+							<div class="flex gap-x-10 ml-2">
+								<div>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="homens">
+										<p class="font-bold font-montserrat">Homens</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="mulheres">
+										<p class="font-bold font-montserrat">Mulheres</p>
+									</label>
+								</div>
+								<div>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="criancas">
+										<p class="font-bold font-montserrat">Crianças</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="jovens">
+										<p class="font-bold font-montserrat">Jovens</p>
+									</label>
+								</div>
+								<div>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="adults">
+										<p class="font-bold font-montserrat">Adultos</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="terceira-idade">
+										<p class="font-bold font-montserrat">Terceira Idade</p>
+									</label>
+								</div>
+							</div>
+						</div>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Descreva as características do <br> seu público?</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Qual é a faixa de renda <br> predominante do seu público-alvo?</p>
+						<div class="relative">
+							<img class="absolute -top-12 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+
+							<div class="ml-2">
+								<div>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="radio" name="renda" value="22">
+										<p class="font-montserrat"><span class="font-bold">Classe A:</span> Renda mensal superior a R$ 22 mil</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="radio" name="renda" value="7,1-22">
+										<p class="font-montserrat"><span class="font-bold">Classe B:</span> Renda mensal entre R$ 7,1 mil e R$ 22 mil</p>
+									</label>
+								</div>
+								<div>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="radio" name="renda" value="2,9-7,1">
+										<p class="font-montserrat"><span class="font-bold">Classe C:</span> Renda mensal entre R$ 2,9 mil e R$ 7,1 mil</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="radio" name="renda" value="2,9">
+										<p class="font-montserrat"><span class="font-bold">Classe D:</span> Renda mensal até R$ 2,9 mil</p>
+									</label>
+								</div>
+								<div>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="radio" name="renda" value="2,9">
+										<p class="font-montserrat"><span class="font-bold">Classe E:</span> Renda mensal inferior a R$ 2,9 mil</p>
+									</label>
+								</div>
+							</div>
+						</div>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat">Há quanto tempo sua <br> empresa existe?</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat">Quais produtos ou serviços sua <br> empresa oferece?</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat">O que faz sua empresa ser especial?</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat">Sua empresa tem algum slogan?</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat">Sua empresa tem concorrentes? <br> Quem são? Fale um pouco <br> sobre eles se achar necessário. <br> Coloque nomes e links. </p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat">Seus concorrentes oferecem algo <br> que sua empresa não oferece?</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat">Quais os objetivos, visões e valores <br> da sua empresa?</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+				</div>
+
+				<div class="space-y-10">
+					<div class="relative">
+						<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Marque quais adjetivos melhor <br> descrevem a sua empresa! Escolha <br> quantos achar necessário!</p>
+						<div class="relative">
+							<img class="absolute -top-9 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+							<div class="flex gap-x-10 ml-2">
+								<div>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="seria">
+										<p class="font-bold font-montserrat">Séria</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="extrovertida">
+										<p class="font-bold font-montserrat">Extrovertida</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="alegre">
+										<p class="font-bold font-montserrat">Alegre</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="moderna">
+										<p class="font-bold font-montserrat">Moderna</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="elegante">
+										<p class="font-bold font-montserrat">Elegante</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="tradicional">
+										<p class="font-bold font-montserrat">Tradicional</p>
+									</label>
+								</div>
+								<div>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="calma">
+										<p class="font-bold font-montserrat">Calma</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="lider">
+										<p class="font-bold font-montserrat">Líder</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="energetica">
+										<p class="font-bold font-montserrat">Energética</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="tecnica">
+										<p class="font-bold font-montserrat">Técnica</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="ousada">
+										<p class="font-bold font-montserrat">Ousada</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="mente aberta">
+										<p class="font-bold font-montserrat">Mente Aberta</p>
+									</label>
+								</div>
+								<div>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="determinada">
+										<p class="font-bold font-montserrat">Determinada</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="persistente">
+										<p class="font-bold font-montserrat">Persistente</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="disciplinada">
+										<p class="font-bold font-montserrat">Disciplinada</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="profissional">
+										<p class="font-bold font-montserrat">Profissional</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="simples">
+										<p class="font-bold font-montserrat">Simples</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="atual">
+										<p class="font-bold font-montserrat">Atual</p>
+									</label>
+								</div>
+							</div>
+						</div>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Dessas palavras que você escolheu, <br> cite 3 que você considera mais forte.</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Se necessário, adicione mais algumas <br> características.</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Marque quais adjetivos <span class="uppercase text-3xl text-red-500">NÃO</span> <br> represetam a sua empresa! Escolha <br> quantos achar necessário!</p>
+						<div class="relative">
+							<img class="absolute -top-9 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+							<div class="flex gap-x-10 ml-2">
+								<div>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="seria">
+										<p class="font-bold font-montserrat">Séria</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="extrovertida">
+										<p class="font-bold font-montserrat">Extrovertida</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="alegre">
+										<p class="font-bold font-montserrat">Alegre</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="moderna">
+										<p class="font-bold font-montserrat">Moderna</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="elegante">
+										<p class="font-bold font-montserrat">Elegante</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="tradicional">
+										<p class="font-bold font-montserrat">Tradicional</p>
+									</label>
+								</div>
+								<div>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="calma">
+										<p class="font-bold font-montserrat">Calma</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="lider">
+										<p class="font-bold font-montserrat">Líder</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="energetica">
+										<p class="font-bold font-montserrat">Energética</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="tecnica">
+										<p class="font-bold font-montserrat">Técnica</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="ousada">
+										<p class="font-bold font-montserrat">Ousada</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="mente aberta">
+										<p class="font-bold font-montserrat">Mente Aberta</p>
+									</label>
+								</div>
+								<div>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="determinada">
+										<p class="font-bold font-montserrat">Determinada</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="persistente">
+										<p class="font-bold font-montserrat">Persistente</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="disciplinada">
+										<p class="font-bold font-montserrat">Disciplinada</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="profissional">
+										<p class="font-bold font-montserrat">Profissional</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="simples">
+										<p class="font-bold font-montserrat">Simples</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="atual">
+										<p class="font-bold font-montserrat">Atual</p>
+									</label>
+								</div>
+							</div>
+						</div>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Há alguma cor que você <span class="uppercase text-3xl text-red-500">NÃO</span> queira <br> na sua marca?</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Pensando apenas em aspectos visuais, <br> selecione alguns atributos que têm <br> alguma relação com a sua marca. </p>
+						<div class="relative">
+							<img class="absolute -top-9 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+							<div class="flex gap-x-10 ml-2">
+								<div>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="seria">
+										<p class="font-bold font-montserrat">Séria</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="extrovertida">
+										<p class="font-bold font-montserrat">Extrovertida</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="conservadora">
+										<p class="font-bold font-montserrat">Conservadora</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="alegre">
+										<p class="font-bold font-montserrat">Alegre</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="aconchegante">
+										<p class="font-bold font-montserrat">Aconchegante</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="delicada">
+										<p class="font-bold font-montserrat">Delicada</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="moderna">
+										<p class="font-bold font-montserrat">Moderna</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="organica">
+										<p class="font-bold font-montserrat">Orgânica</p>
+									</label>
+								</div>
+								<div>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="sofisticada">
+										<p class="font-bold font-montserrat">Sofisticada</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="elegante">
+										<p class="font-bold font-montserrat">Elegante</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="vibrante">
+										<p class="font-bold font-montserrat">Vibrante</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="tradicional">
+										<p class="font-bold font-montserrat">Tradicional</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="retro">
+										<p class="font-bold font-montserrat">Retrô</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="digital">
+										<p class="font-bold font-montserrat">Digital</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="pesada">
+										<p class="font-bold font-montserrat">Pesada</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="leve">
+										<p class="font-bold font-montserrat">Leve</p>
+									</label>
+								</div>
+								<div>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="discreta">
+										<p class="font-bold font-montserrat">Discreta</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="nobre">
+										<p class="font-bold font-montserrat">Nobre</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="popular">
+										<p class="font-bold font-montserrat">Popular</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="romantica">
+										<p class="font-bold font-montserrat">Romântica</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="formal">
+										<p class="font-bold font-montserrat">Formal</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="ousada">
+										<p class="font-bold font-montserrat">Ousada</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="humana">
+										<p class="font-bold font-montserrat">Humana</p>
+									</label>
+									<label class="flex gap-x-3">
+										<input class="inputs" type="checkbox" name="rebelde">
+										<p class="font-bold font-montserrat">Rebelde</p>
+									</label>
+								</div>
+							</div>
+						</div>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Sua empresa, você ou algum produto <br> que você comercializa possui <br> uma história?</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Tem alguma referência? (Perfis, <br> pessoas ou empresas que você utilize <br> como inspiração/referência)</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+					<div class="relative">
+						<label>
+							<p class="ml-1 mb-4 font-black text-2xl leading-7 font-montserrat font-">Fique a vontade para dizer mais <br> sobre a sua empresa ou dar <br> considerações finais.</p>
+							<div class="relative">
+								<img class="absolute top-3 -left-5 w-3 opacity-0" src="arquivos/images/invalid.png">
+								<textarea class="inputs w-[30rem] resize-none font-montserrat text-sm text-neutral-200 focus:text-white py-1 pl-5 bg-transparent border-2 border-white rounded-2xl" type="text" rows="1" name="full-name" data-valid="false"></textarea>
+							</div>
+						</label>
+						<p class="ml-2 mt-1 text-xs text-red-500 select-none opacity-0">Resposta obrigatória!</p>
+					</div>
+				</div>
+
+			</form>
+			<div class="flex justify-between items-center my-16">
+				<div class="flex items-center gap-x-3">
+					<button id="next-form" class="flex items-center font-bold px-5 py-1 text-black bg-white rounded-2xl hover:bg-neutral-300 transition-all cursor-pointer">
+						Avançar
+						<img class="w-4 ml-2 translate-y-0.5" src="arquivos/images/arrow-right.png">
+					</button>
+					<p id="form-percent" class="text-white opacity-50">33% Concluído</p>
+				</div>
+				<div>
+					<img class="w-24" src="arquivos/images/ivstudio-logo.png">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="arquivos/js/main.js"></script>
+</body>
+</html>

@@ -1,14 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html class="scroll-smooth" lang="pt-BR">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="arquivos/images/favicon.png"/>
-
-	<!-- FONTS -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
 	<!-- TAILWINDCSS CDN -->
 	<!-- <script src="https://cdn.tailwindcss.com"></script> -->
@@ -16,23 +11,215 @@
 	<!-- TAILWINDCSS  -->
 	<link rel="stylesheet" href="arquivos/css/styles.css">
 
-	<style>
-		h1 {
-			font-family: 'Montserrat', sans-serif;
-		}
-	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
 	<title>IV Studio</title>
 </head>
 <body>
-	<main class="w-full h-screen bg-neutral-900">
-		<div class="w-full h-[95%] overflow-hidden relative rounded-b-[60px]">
-			<div class="w-full h-full bg-[url('../images/bg-eye-blurry.png')] bg-center bg-cover bg-no-repeat"></div>
-			<div class="w-full h-full flex flex-col justify-center items-center gap-y-16 absolute top-0 left-0">
-				<img class="w-72 sm:w-[26rem]" src="arquivos/images/ivstudio-logo.png">
-				<h1 class="text-zinc-400 font-bold text-xl sm:text-2xl">Estamos em manutenção!</h1>
+	<main class="w-full h-screen bg-neutral-900 z-10">
+		<section class="w-full h-[90%] flex flex-col items-center overflow-hidden bg-[url('../images/bg-eye-blurry.png')] bg-center bg-cover bg-no-repeat relative rounded-b-[60px]">
+			<header class="w-full flex px-12 sm:px-0 justify-between sm:justify-around items-center pt-12">
+				<div>
+					<a class="hidden sm:block" href="https://ivstudio.com.br"><img class="w-52 sm:w-60" src="arquivos/images/ivstudio-logo.png"></a>
+					<a class="sm:hidden" href="https://ivstudio.com.br"><img class="w-16" src="arquivos/images/iv-icon.png"></a>
+				</div>
+				<nav class="hidden md:block">
+					<ul class="flex space-x-7">
+						<li><a class="text-white relative font-montserrat font-bold text-2xl after:content-[' '] after:absolute after:left-1/2 after:-bottom-5 after:bg-white after:w-2 after:h-2 after:rounded-full" href="#">Home</a></li>
+						<li><a class="text-white font-montserrat font-bold text-2xl" href="#sobre">Sobre</a></li>
+						<li><a class="text-white font-montserrat font-bold text-2xl" href="#projetos">Projetos</a></li>
+						<li><a class="text-white font-montserrat font-bold text-2xl" href="#contato">Contato</a></li>
+					</ul>
+				</nav>
+				<div class="md:hidden">
+					<button id="open-drawer-btn" class="space-y-1.5 mt-2">
+						<div class="w-8 h-1 bg-white rounded"></div>
+						<div class="w-8 h-1 bg-white rounded"></div>
+						<div class="w-8 h-1 bg-white rounded"></div>
+					</button>
+				</div>
+			</header>
+
+			<div class="w-full h-full flex justify-center items-center px-28">
+				<div class="space-y-5">
+					<div>
+						<h1 class="text-center md:text-left text-4xl font-bold text-white font-montserrat leading-8 whitespace-nowrap">Experts <br> em dar a vida <br> às ideias <br> através do <br> design.</h1>
+					</div>
+					<div>
+						<p class="text-center md:text-left text-white font-montserrat leading-5 text-lg" whitespace-nowrap>Atendemos clientes do <br> Brasil e do mundo. <br>
+						Somos focados em criar <br> soluções funcionais <br> com criatividade!
+						</p>
+					</div>
+					<div class="text-center md:text-left">
+						<a href="#" class="font-black font-montserrat font-bold bg-white rounded-3xl px-6 py-2.5 whitespace-nowrap">Entre em contato</a>
+					</div>
+				</div>
+				<div class="hidden md:block">
+					<img class="min-w-[30rem]" src="arquivos/images/hero-image-placeholder.png">
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<div id="drawer-container" class="w-full h-full flex justify-end fixed top-0 left-0 bg-neutral-900/75 hidden">
+		<div id="drawer" class="w-full xs:max-w-[18rem] h-full bg-black p-5 transition-all hidden">
+			<div class="w-full flex justify-end">
+				<button id="close-drawer-btn" class="font-montserrat font-bold text-white text-4xl hover:text-neutral-400 transition-all">X</button>
+			</div>
+			<div class="mt-7">
+				<ul class="space-y-3 text-right">
+					<li class="text-white font-montserrat text-2xl hover:text-neutral-400 transition-all"><a href="#">Home<a></li>
+					<li class="text-white font-montserrat text-2xl hover:text-neutral-400 transition-all"><a href="#sobre">Sobre<a></li>
+					<li class="text-white font-montserrat text-2xl hover:text-neutral-400 transition-all"><a href="#projetos">Projetos<a></li>
+					<li class="text-white font-montserrat text-2xl hover:text-neutral-400 transition-all"><a href="#contato">Contato<a></li>
+				</ul>
 			</div>
 		</div>
-	</main>
+	</div>
+
+	<section id="sobre" class="px-10 pb-16 bg-neutral-900">
+		<div class="w-full h-full flex gap-x-10 justify-center items-center">
+			<div class="hidden lg:block">
+				<img class="relative -top-20 w-[34rem]" src="arquivos/images/cartoes-placeholder.png">
+			</div>
+			<div class="space-y-6">
+				<div>
+					<h1 class="text-center lg:text-left text-3xl xs:text-4xl font-bold text-white font-montserrat leading-8 whitespace-nowrap">Somos focados <br> em criar soluções <br> funcionais com <br> criatividade!</h1>
+				</div>
+				<div class="space-y-5">
+					<div class="w-full max-w-[21rem]">
+						<p class="text-center lg:text-left text-white text-xs/5 xs:text-lg/5 font-montserrat break-words">
+							O nosso stúdio surgiu da vontade
+							e do prazer em fazer parte da história
+							de cada cliente através dos
+							nossos projetos.
+						</p>
+					</div>
+					<div class="w-full max-w-[23rem]">
+						<p class="text-center lg:text-left text-white text-xs/5 xs:text-lg/5 font-montserrat break-words">
+							Acreditamos que o design tem o poder
+							de contar histórias, transmitir emoções 
+							e fortalecer marcas. Combinamos 
+							expertise técnica e uma 
+							arbodagem colaborativa para 
+							desenvolver projetos únicos e 
+							personalizados. 
+						</p>
+					</div>
+					<div class="w-full max-w-[23rem]">
+						<p class="text-center lg:text-left text-white text-xs/5 xs:text-lg/5 font-montserrat break-words">
+							Desde identidades visuais até interfaces <br>
+							intuitivas e websites atraentes, estamos <br>
+							aqui para ajuda-lo a alcançar seus <br>
+							objetivos de design.
+						</p>
+					</div>
+					<div class="w-full max-w-[20rem]">
+						<p class="text-center lg:text-left text-white text-xs/5 xs:text-lg/5 font-montserrat break-words">
+							Seja bem-vindo ao nosso stúdio de <br>
+							design, onde suas ideias ganham vida!
+						</p>
+					</div>
+				</div>
+				<div class="text-center lg:text-left">
+					<a href="#" class="font-black font-montserrat font-bold bg-white rounded-3xl px-6 py-2.5">Fale conosco!</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="projetos" class="bg-neutral-900">
+		<div class="w-full h-full flex flex-col gap-y-16 justify-center items-center bg-black rounded-t-[60px] py-28">
+			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-3 gap-5">
+				<div class="sm:row-span-2 w-64 h-full bg-neutral-900 rounded-[50px]">
+					
+				</div>
+				<div class="w-64 h-64 bg-neutral-900 rounded-[50px]">
+					
+				</div>
+				<div class="w-64 h-64 bg-neutral-900 rounded-[50px]">
+					
+				</div>
+				<div class="sm:col-span-2 w-full h-64 bg-neutral-900 rounded-[50px]">
+					
+				</div>
+				<div class="w-64 h-64 bg-neutral-900 rounded-[50px]">
+					
+				</div>
+				<div class="w-64 h-64 bg-neutral-900 rounded-[50px]">
+					
+				</div>
+				<div class="w-64 h-64 bg-neutral-900 rounded-[50px]">
+					
+				</div>
+			</div>
+			<div>
+				<a href="#" class="font-black font-montserrat font-bold bg-white rounded-3xl px-6 py-2.5">Veja todos os projetos</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="w-full bg-[#0a0a0a]">
+		<div class="w-full py-5 flex gap-5 flex-wrap justify-center items-center">
+			<div class="w-32 h-20 bg-neutral-800"></div>
+			<div class="w-32 h-20 bg-neutral-800"></div>
+			<div class="w-32 h-20 bg-neutral-800"></div>
+			<div class="w-32 h-20 bg-neutral-800"></div>
+			<div class="w-32 h-20 bg-neutral-800"></div>
+		</div>
+	</section>
+
+	<section id="contato" class="w-full h-full bg-black">
+		<div class="w-full h-full px-5 py-20 flex justify-center items-center">
+			<div class="w-full max-w-3xl flex flex-wrap md:flex-nowrap gap-10 justify-center items-center p-10 bg-[#101010] rounded-[60px]">
+				<div class="w-56 h-72 bg-neutral-700 rounded-3xl">
+					
+				</div>
+				<div>
+					<div class="text-center md:text-left space-y-8">
+						<h1 class="text-white font-montserrat font-bold text-3xl sm:text-5xl leading-8 whitespace-nowrap">Precisa de <br> um projeto?</h1>
+						<p class="text-white font-montserrat text-base sm:text-xl leading-5">
+							Entre em contato com a nossa equipe <br> 
+							e faça o seu orçamento! Teremos o prazer <br>
+							em participar desse projeto!
+						</p>
+						<div>
+							<a href="#" class="font-black text-base sm:text-lg font-montserrat font-bold bg-[#00ff7b] rounded-3xl px-8 py-2.5 whitespace-nowrap">Quero um orçamento</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="w-full bg-black py-10">
+		<div class="w-full flex flex-col gap-y-3 md:hidden">
+			<div class="w-full text-center">
+				<p class="text-white font-madeTommy text-xs">&copy 2023 Thales Web Developer. Todos os diretos reservados.</p>
+				<p class="text-white font-madeTommy text-xs">Design feito por IV Studio.</p>
+			</div>
+			<div class="w-full flex justify-center items-center gap-x-4">
+				<div>
+					<a href="https://ivstudio.com.br"><img class="w-32" src="arquivos/images/ivstudio-logo.png" alt="ivstudio logo"></a>
+				</div>
+				<div class="w-px h-8 bg-white"></div>
+				<div>
+					<a href="https://thalesdeveloper.com.br" target="_blank"><img class="w-32" src="arquivos/images/thalesdeveloper-logo.png" alt="thales web developer logo"></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="hidden w-full md:flex justify-around items-center px-10">
+			<a href="https://ivstudio.com.br"><img class="w-52" src="arquivos/images/ivstudio-logo.png"></a>
+			<div>
+				<p class="text-white font-montserrat text-center text-sm">&copy 2023 IV Studio. Todos os direitos reservados.</p>
+				<p class="text-white font-montserrat text-center text-sm">Desenvolvido por Thales Web Developer.</p>
+			</div>
+			<a href="https://thalesdeveloper.com.br" target="_blank"><img class="w-52" src="arquivos/images/thalesdeveloper-logo.png"></a>
+		</div>
+	</footer>
+
+	<script src="arquivos/js/utils.js"></script>
+	<script src="arquivos/js/main.js"></script>
 </body>
 </html>
