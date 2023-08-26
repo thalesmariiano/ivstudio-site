@@ -623,6 +623,14 @@ input[type="checkbox"]:checked {
   margin-top: 1.75rem;
 }
 
+.mt-10{
+  margin-top: 2.5rem;
+}
+
+.block{
+  display: block;
+}
+
 .flex{
   display: flex;
 }
@@ -677,6 +685,10 @@ input[type="checkbox"]:checked {
 
 .h-screen{
   height: 100vh;
+}
+
+.h-\[42rem\]{
+  height: 42rem;
 }
 
 .w-10{
@@ -835,6 +847,10 @@ input[type="checkbox"]:checked {
   align-items: center;
 }
 
+.justify-start{
+  justify-content: flex-start;
+}
+
 .justify-end{
   justify-content: flex-end;
 }
@@ -955,6 +971,12 @@ input[type="checkbox"]:checked {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+
+.space-y-7 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden{
@@ -1522,6 +1544,10 @@ input[type="checkbox"]:checked {
     flex-wrap: nowrap;
   }
 
+  .md\:justify-start{
+    justify-content: flex-start;
+  }
+
   .md\:text-left{
     text-align: left;
   }
@@ -1530,6 +1556,18 @@ input[type="checkbox"]:checked {
 @media (min-width: 1024px){
   .lg\:block{
     display: block;
+  }
+
+  .lg\:justify-start{
+    justify-content: flex-start;
+  }
+
+  .lg\:justify-end{
+    justify-content: flex-end;
+  }
+
+  .lg\:justify-center{
+    justify-content: center;
   }
 
   .lg\:text-left{
