@@ -1,4 +1,24 @@
 
+const openDrawer = document.querySelector("#open-drawer-btn")
+const closeDrawer = document.querySelector("#close-drawer-btn")
+const drawerContainer = document.querySelector("#drawer-container")
+const drawer = document.querySelector("#drawer")
+
+openDrawer.addEventListener('click', () => {
+	addAnimation(drawerContainer, "animate__fadeIn")
+	addAnimation(drawer, "animate__slideInRight")
+})
+
+closeDrawer.addEventListener('click', () => {
+	removeAnimation(drawerContainer, "animate__fadeOut")
+	removeAnimation(drawer, "animate__slideOutRight")
+})
+
+drawerContainer.addEventListener('click', () => {
+	removeAnimation(drawerContainer, "animate__fadeOut")
+	removeAnimation(drawer, "animate__slideOutRight")	
+})
+
 const form         = document.querySelector("form")
 const formPercent  = document.querySelector("#form-percent")
 const nextForm     = document.querySelector("#next-form")
