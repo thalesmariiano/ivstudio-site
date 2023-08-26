@@ -944,6 +944,26 @@ input[type="checkbox"]:checked {
        column-gap: 4rem;
 }
 
+.gap-x-12{
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+
+.gap-x-24{
+  -moz-column-gap: 6rem;
+       column-gap: 6rem;
+}
+
+.gap-x-32{
+  -moz-column-gap: 8rem;
+       column-gap: 8rem;
+}
+
+.gap-x-36{
+  -moz-column-gap: 9rem;
+       column-gap: 9rem;
+}
+
 .space-x-5 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(1.25rem * var(--tw-space-x-reverse));
