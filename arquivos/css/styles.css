@@ -619,6 +619,14 @@ input[type="checkbox"]:checked {
   margin-top: 1.75rem;
 }
 
+.mb-5{
+  margin-bottom: 1.25rem;
+}
+
+.mb-7{
+  margin-bottom: 1.75rem;
+}
+
 .block{
   display: block;
 }
@@ -864,6 +872,11 @@ input[type="checkbox"]:checked {
        column-gap: 1.25rem;
 }
 
+.gap-x-56{
+  -moz-column-gap: 14rem;
+       column-gap: 14rem;
+}
+
 .gap-y-10{
   row-gap: 2.5rem;
 }
@@ -886,16 +899,6 @@ input[type="checkbox"]:checked {
 
 .gap-y-7{
   row-gap: 1.75rem;
-}
-
-.gap-x-64{
-  -moz-column-gap: 16rem;
-       column-gap: 16rem;
-}
-
-.gap-x-56{
-  -moz-column-gap: 14rem;
-       column-gap: 14rem;
 }
 
 .space-x-5 > :not([hidden]) ~ :not([hidden]){
@@ -944,12 +947,6 @@ input[type="checkbox"]:checked {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
-}
-
-.space-y-8 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
 .scroll-smooth{
@@ -1260,16 +1257,16 @@ input[type="checkbox"]:checked {
   text-transform: uppercase;
 }
 
-.leading-5{
-  line-height: 1.25rem;
-}
-
 .leading-7{
   line-height: 1.75rem;
 }
 
 .leading-8{
   line-height: 2rem;
+}
+
+.leading-5{
+  line-height: 1.25rem;
 }
 
 .text-black{
@@ -1474,6 +1471,11 @@ input[type="checkbox"]:checked {
   .sm\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-xl\/5{
+    font-size: 1.25rem;
+    line-height: 1.25rem;
   }
 
   .sm\:text-xl{
