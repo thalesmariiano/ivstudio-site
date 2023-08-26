@@ -775,10 +775,6 @@ input[type="checkbox"]:checked {
   max-width: 48rem;
 }
 
-.max-w-\[18rem\]{
-  max-width: 18rem;
-}
-
 .max-w-\[20rem\]{
   max-width: 20rem;
 }
@@ -963,6 +959,10 @@ input[type="checkbox"]:checked {
 
 .overflow-hidden{
   overflow: hidden;
+}
+
+.scroll-smooth{
+  scroll-behavior: smooth;
 }
 
 .whitespace-nowrap{
@@ -1331,10 +1331,6 @@ input[type="checkbox"]:checked {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
-}
-
-.duration-100{
-  transition-duration: 100ms;
 }
 
 .after\:absolute::after{
