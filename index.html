@@ -30,7 +30,7 @@
 					</ul>
 				</nav>
 				<div class="md:hidden">
-					<button class="space-y-1.5 mt-2">
+					<button id="open-drawe-btn" class="space-y-1.5 mt-2">
 						<div class="w-8 h-1 bg-white rounded"></div>
 						<div class="w-8 h-1 bg-white rounded"></div>
 						<div class="w-8 h-1 bg-white rounded"></div>
@@ -58,6 +58,22 @@
 			</div>
 		</section>
 	</main>
+
+	<div id="drawer-container" class="w-full h-full flex justify-end fixed top-0 left-0 bg-neutral-900/75 hidden">
+		<div id="drawer" class="w-full max-w-[18rem] h-full bg-black p-5 hidden">
+			<div class="w-full flex justify-end">
+				<button class="font-montserrat font-bold text-white text-4xl hover:text-neutral-400 transition-all">X</button>
+			</div>
+			<div class="mt-7">
+				<ul class="space-y-3 text-right">
+					<li class="text-white font-montserrat text-2xl hover:text-neutral-400 transition-all"><a href="#">Home<a></li>
+					<li class="text-white font-montserrat text-2xl hover:text-neutral-400 transition-all"><a href="#">Sobre<a></li>
+					<li class="text-white font-montserrat text-2xl hover:text-neutral-400 transition-all"><a href="#">Projetos<a></li>
+					<li class="text-white font-montserrat text-2xl hover:text-neutral-400 transition-all"><a href="#">Contato<a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 
 	<section class="px-10 pb-16 bg-neutral-900">
 		<div class="w-full h-full flex gap-x-10 justify-center items-center">
@@ -200,6 +216,5 @@
 			<a href="https://thalesdeveloper.com.br" target="_blank"><img class="w-52" src="arquivos/images/thalesdeveloper-logo.png"></a>
 		</div>
 	</footer>
-
 </body>
 </html>
