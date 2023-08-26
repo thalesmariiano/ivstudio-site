@@ -1,8 +1,18 @@
 
-const openDrawer = document.querySelector("#open-drawer-btn")
-const closeDrawer = document.querySelector("#close-drawer-btn")
+const form         = document.querySelector("form")
+const formPercent  = document.querySelector("#form-percent")
+const nextForm     = document.querySelector("#next-form")
+const inputs       = document.querySelectorAll(".inputs")
+
+const emailRegex   = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+var validAmount    = 0
+var blockSubmit    = false
+
+const openDrawer      = document.querySelector("#open-drawer-btn")
+const closeDrawer     = document.querySelector("#close-drawer-btn")
 const drawerContainer = document.querySelector("#drawer-container")
-const drawer = document.querySelector("#drawer")
+const drawer          = document.querySelector("#drawer")
+
 
 openDrawer.addEventListener('click', () => {
 	addAnimation(drawerContainer, "animate__fadeIn")
@@ -19,14 +29,6 @@ drawerContainer.addEventListener('click', () => {
 	removeAnimation(drawer, "animate__slideOutRight")	
 })
 
-const form         = document.querySelector("form")
-const formPercent  = document.querySelector("#form-percent")
-const nextForm     = document.querySelector("#next-form")
-const inputs       = document.querySelectorAll(".inputs")
-
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-var validAmount  = 0
-var blockSubmit  = false
 
 inputs.forEach(i => {
 	i.addEventListener("blur", onBlurListener)
