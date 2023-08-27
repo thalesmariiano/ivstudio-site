@@ -29,6 +29,29 @@ drawerContainer.addEventListener('click', () => {
 	removeAnimation(drawer, "animate__slideOutRight")	
 })
 
+const controller = new ScrollMagic.Controller()
+
+const inicio_scene = new ScrollMagic.Scene({triggerElement: "#inicio", duration: "90%"})
+	  inicio_scene.setClassToggle("#home-link", "link-selected")
+	  inicio_scene.offset(90)
+	  inicio_scene.addTo(controller)
+
+const sobre_scene = new ScrollMagic.Scene({triggerElement: "#sobre", duration: "90%"})
+	  sobre_scene.setClassToggle("#sobre-link", "link-selected")
+	  sobre_scene.offset(90)
+	  sobre_scene.addTo(controller)
+
+const projetosHeight = document.querySelector("#projetos").clientHeight
+const projetos_scene = new ScrollMagic.Scene({triggerElement: "#projetos", duration: projetosHeight + 200})
+	  projetos_scene.setClassToggle("#projetos-link", "link-selected")
+	  projetos_scene.offset(-110)
+	  projetos_scene.addTo(controller)
+
+const contato_scene = new ScrollMagic.Scene({triggerElement: "#contato", duration: "90%"})
+	  contato_scene.setClassToggle("#contato-link", "link-selected")
+	  contato_scene.offset(-30)
+	  contato_scene.addTo(controller)
+
 
 inputs.forEach(i => {
 	i.addEventListener("blur", onBlurListener)
