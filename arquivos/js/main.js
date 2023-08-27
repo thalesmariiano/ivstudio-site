@@ -31,6 +31,55 @@ drawerContainer.addEventListener('click', () => {
 
 const controller = new ScrollMagic.Controller()
 
+const header        = document.querySelector("#header")
+const logo          = document.querySelector("#logo")
+const homeLink      = document.querySelector("#home-link")
+const sobreLink     = document.querySelector("#sobre-link")
+const projetosLink  = document.querySelector("#projetos-link")
+const contatoLink   = document.querySelector("#contato-link")
+
+const header_scene = new ScrollMagic.Scene({triggerElement: "#inicio", duration: "60%"})
+	  header_scene.on("enter leave", e => {
+	  	if(e.type === "leave"){
+
+	  		header.classList.remove("pt-16")
+	  		header.classList.add("py-8")
+	  		header.style.backgroundColor = "#000"
+
+	  		logo.classList.add("w-40")
+	  		logo.classList.remove("w-64")
+
+	  		homeLink.classList.remove("text-3xl")
+	  		sobreLink.classList.remove("text-3xl")
+	  		projetosLink.classList.remove("text-3xl")
+	  		contatoLink.classList.remove("text-3xl")
+
+	  		homeLink.classList.add("text-2xl")
+	  		sobreLink.classList.add("text-2xl")
+	  		projetosLink.classList.add("text-2xl")
+	  		contatoLink.classList.add("text-2xl")
+
+	  	}else{
+	  		header.classList.add("pt-16")
+	  		header.classList.remove("py-8")
+	  		header.style.backgroundColor = ""
+
+	  		logo.classList.remove("w-40")
+	  		logo.classList.add("w-64")
+
+	  		homeLink.classList.add("text-3xl")
+	  		sobreLink.classList.add("text-3xl")
+	  		projetosLink.classList.add("text-3xl")
+	  		contatoLink.classList.add("text-3xl")
+
+	  		homeLink.classList.remove("text-2xl")
+	  		sobreLink.classList.remove("text-2xl")
+	  		projetosLink.classList.remove("text-2xl")
+	  		contatoLink.classList.remove("text-2xl")
+	  	}
+	  })
+	  header_scene.addTo(controller)
+
 const inicio_scene = new ScrollMagic.Scene({triggerElement: "#inicio", duration: "90%"})
 	  inicio_scene.setClassToggle("#home-link", "link-selected")
 	  inicio_scene.offset(90)
