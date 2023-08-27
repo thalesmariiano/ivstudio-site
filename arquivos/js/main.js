@@ -85,7 +85,7 @@ const inicio_scene = new ScrollMagic.Scene({triggerElement: "#inicio", duration:
 	  inicio_scene.offset(90)
 	  inicio_scene.addTo(controller)
 
-const sobre_scene = new ScrollMagic.Scene({triggerElement: "#sobre", duration: "90%"})
+const sobre_scene = new ScrollMagic.Scene({triggerElement: "#sobre", duration: "76%"})
 	  sobre_scene.setClassToggle("#sobre-link", "link-selected")
 	  sobre_scene.offset(90)
 	  sobre_scene.addTo(controller)
